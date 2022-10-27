@@ -1,17 +1,24 @@
 import React from 'react';
+// 有新特性
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+// 老api
+import React17DOM from 'react-dom';
+
+
+import { AutoBatch, ClassAutoBatch } from './pages/AutoBatch';
+import { TransitionDemo } from './pages/TransitionDemo';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+root.render(<TransitionDemo />);
+
+// React17DOM.render(<ClassAutoBatch />, document.getElementById('root'));
+
+
+// root.render(<AutoBatch />);
+
+// React17DOM.render(<AutoBatch />, document.getElementById('root'));
+// root.render(<AutoBatch />);
+// React17DOM.render(<AutoBatch />, document.getElementById('root'));
+// root.render(<TransitionDemo />);
